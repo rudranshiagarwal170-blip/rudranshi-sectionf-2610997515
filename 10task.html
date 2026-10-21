@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #fff7ec; margin: 0; padding: 20px; }
+    .wrap { overflow-x: auto; }
+    table { margin: auto; background: #fff; min-width: 420px; }
+    caption { font-size: 22px; font-weight: bold; color: #8a1c00; margin-bottom: 10px; }
+    th { background: #b9d3f2; }
+    .starters { background: #fbd9c2; font-weight: bold; }
+    .main { background: #cfe9c8; font-weight: bold; }
+    .dessert { background: #f4cfd2; font-weight: bold; }
+    .drinks { background: #c4dcf6; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <table border="1" cellpadding="8" cellspacing="0" align="center">
+      <caption>Today's Special Menu</caption>
+      <tr>
+        <th>Category</th>
+        <th>Food Item</th>
+        <th>Price (&#8377;)</th>
+      </tr>
+
+      <tr>
+        <td class="starters" rowspan="3" align="center" valign="middle">Starters</td>
+        <td>Spring Rolls</td><td align="center">120</td>
+      </tr>
+      <tr><td>Garlic Bread</td><td align="center">100</td></tr>
+      <tr><td>Veg Soup</td><td align="center">80</td></tr>
+
+      <tr>
+        <td class="main" rowspan="3" align="center" valign="middle">Main Course</td>
+        <td>Paneer Butter Masala</td><td align="center">180</td>
+      </tr>
+      <tr><td>Veg Biryani</td><td align="center">150</td></tr>
+      <tr><td>Dal Tadka</td><td align="center">120</td></tr>
+
+      <tr>
+        <td class="dessert" rowspan="3" align="center" valign="middle">Desserts</td>
+        <td>Chocolate Cake</td><td align="center">90</td>
+      </tr>
+      <tr><td>Ice Cream</td><td align="center">70</td></tr>
+      <tr><td>Gulab Jamun</td><td align="center">60</td></tr>
+
+      <tr>
+        <td class="drinks" rowspan="3" align="center" valign="middle">Drinks</td>
+        <td>Fresh Lime Soda</td><td align="center">50</td>
+      </tr>
+      <tr><td>Cold Coffee</td><td align="center">80</td></tr>
+      <tr><td>Mango Shake</td><td align="center">70</td></tr>
+    </table>
+  </div>
+</body>
+</html>

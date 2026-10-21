@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Explore the World – Travel Agency</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            height: 20%;
+            background-color: #d9d9d9;
+            text-align: center;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        .main {
+            display: flex;
+            min-height: 300px;
+        }
+        .navigation {
+            width: 25%;
+            background-color: #eeeeee;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        .destinations {
+            width: 45%;
+            background-color: #dceaf7;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        .packages {
+            width: 30%;
+            background-color: #cfe2f3;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        a {
+            display: block;
+            margin: 12px 0;
+            color: #0645ad;
+            cursor: pointer;
+        }
+        .footer {
+            background-color: #d9d9d9;
+            text-align: center;
+            padding: 15px;
+        }
+        h3 {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h2>EXPLORE THE WORLD</h2>
+    <p>Welcome to Our Travel Agency</p>
+    <p>Your Journey, Our Responsibility!</p>
+</div>
+
+<div class="main">
+
+    <div class="navigation">
+        <h3>Navigation</h3>
+        <a onclick="showDestination('Home')">HOME</a>
+        <a onclick="showDestination('Destinations')">DESTINATIONS</a>
+        <a onclick="showDestination('Packages')">PACKAGES</a>
+    </div>
+
+    <div class="destinations" id="destination">
+        <h3>Tourist Destinations</h3>
+        <p>MANALI</p>
+        <p>GOA</p>
+        <p>JAIPUR</p>
+    </div>
+
+    <div class="packages" id="package">
+        <h3>Travel Packages</h3>
+        <p>BUDGET</p>
+        <p>FAMILY</p>
+        <p>ADVENTURE</p>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>Contact Details: 9876543210</p>
+    <p>Email: info@exploretheworld.com</p>
+    <p>Copyright © 2026 Explore the World</p>
+</div>
+
+<script>
+    function showDestination(page) {
+        const destination = document.getElementById("destination");
+        const packages = document.getElementById("package");
+
+        if (page === "Home") {
+            destination.innerHTML =
+                "<h3>Home</h3><p>Welcome to Explore the World!</p><p>Discover beautiful places with us.</p>";
+            packages.innerHTML =
+                "<h3>Our Services</h3><p>Affordable trips</p><p>Family holidays</p>";
+        } else if (page === "Destinations") {
+            destination.innerHTML =
+                "<h3>Tourist Destinations</h3><p>MANALI</p><p>GOA</p><p>JAIPUR</p>";
+            packages.innerHTML =
+                "<h3>Popular Places</h3><p>Mountains</p><p>Beaches</p><p>Heritage Sites</p>";
+        } else if (page === "Packages") {
+            destination.innerHTML =
+                "<h3>Available Packages</h3><p>Budget Package</p><p>Family Package</p><p>Adventure Package</p>";
+            packages.innerHTML =
+                "<h3>Package Types</h3><p>BUDGET</p><p>FAMILY</p><p>ADVENTURE</p>";
+        }
+    }
+</script>
+
+</body>
+</html>

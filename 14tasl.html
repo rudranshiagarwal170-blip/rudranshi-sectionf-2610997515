@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>College Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #203864;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .layout {
+            display: flex;
+            min-height: 400px;
+        }
+        nav {
+            width: 25%;
+            background-color: #d9eaf7;
+            padding: 20px;
+        }
+        nav a {
+            display: block;
+            margin: 15px 0;
+            color: #203864;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        main {
+            width: 75%;
+            padding: 25px;
+        }
+        footer {
+            background-color: #203864;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ABC College</h1>
+    <p>Welcome to ABC College – Learn, Grow and Succeed</p>
+</header>
+
+<div class="layout">
+    <nav>
+        <h3>Navigation</h3>
+        <a onclick="showPage('Home')">Home</a>
+        <a onclick="showPage('About Us')">About Us</a>
+        <a onclick="showPage('Courses')">Courses</a>
+        <a onclick="showPage('Faculty')">Faculty</a>
+        <a onclick="showPage('Contact Us')">Contact Us</a>
+    </nav>
+
+    <main id="content">
+        <h2>Home</h2>
+        <p>Welcome to ABC College.</p>
+        <p>We provide quality education and excellent learning opportunities.</p>
+    </main>
+</div>
+
+<footer>
+    <p>ABC College | Email: info@abccollege.edu | All Rights Reserved</p>
+</footer>
+
+<script>
+    function showPage(page) {
+        let content = document.getElementById("content");
+
+        if (page === "Home") {
+            content.innerHTML =
+                "<h2>Home</h2><p>Welcome to ABC College.</p>";
+        } else if (page === "About Us") {
+            content.innerHTML =
+                "<h2>About Us</h2><p>ABC College provides quality education and helps students build successful careers.</p>";
+        } else if (page === "Courses") {
+            content.innerHTML =
+                "<h2>Courses</h2><ul><li>BCA</li><li>BBA</li><li>B.Tech</li><li>MBA</li></ul>";
+        } else if (page === "Faculty") {
+            content.innerHTML =
+                "<h2>Faculty</h2><p>Our experienced faculty members guide students in academics and practical learning.</p>";
+        } else if (page === "Contact Us") {
+            content.innerHTML =
+                "<h2>Contact Us</h2><p>Email: info@abccollege.edu</p><p>Phone: 9876543210</p>";
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Restaurant Menu</title>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, sans-serif; background: #fff7ec; margin: 0; padding: 20px; color: #222; }
+    .box { max-width: 850px; margin: auto; background: #fff; padding: 25px 30px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,.15); }
+    h1 { text-align: center; color: #b23a00; }
+    h2 { color: #8a2c00; border-bottom: 2px solid #e0a070; padding-bottom: 4px; }
+    p { line-height: 1.6; }
+    section { margin-top: 30px; }
+    .center { text-align: center; }
+    img { max-width: 100%; border-radius: 8px; }
+    a { color: #1f3560; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="box" id="top">
+    <h1>Interactive Restaurant Menu</h1>
+    <p class="center">Click on any food item in the picture to know more about it.</p>
+
+    <div class="center">
+      <img src="images/menu.jpg" alt="Restaurant food menu" width="774" height="513" usemap="#foodmap">
+    </div>
+
+    <map name="foodmap">
+      <!-- 2 circle areas -->
+      <area shape="circle" coords="282,382,112" href="#pizza" alt="Pizza" title="Pizza">
+      <area shape="circle" coords="630,138,90" href="#burger" alt="Burger" title="Burger">
+
+      <!-- 2 rect areas -->
+      <area shape="rect" coords="480,262,618,393" href="#fries" alt="French Fries" title="French Fries">
+      <area shape="rect" coords="0,262,158,483" href="#menucard" alt="Menu Card" title="Menu Card">
+
+      <!-- 2 poly areas -->
+      <area shape="poly" coords="10,300,100,290,135,330,130,420,95,445,20,440" href="#sandwich" alt="Sandwich" title="Sandwich">
+      <area shape="poly" coords="385,3,518,95,410,222,272,128" href="#cake" alt="Cake Slice" title="Cake Slice">
+
+      <!-- 1 default area (remaining part of the image) -->
+      <area shape="default" href="#others" alt="Other Items" title="Other Items">
+    </map>
+
+    <section id="pizza">
+      <h2>Pizza</h2>
+      <div class="center"><img src="https://loremflickr.com/600/400/pizza?lock=201" alt="Pizza" width="450"></div>
+      <p>Our wood-fired pizza has a thin crispy base, rich tomato sauce, melted mozzarella and spicy pepperoni toppings. It is baked fresh to order and is perfect for sharing with friends and family. Price: Rs. 399.</p>
+      <p class="center"><a href="#top">&larr; Back to Menu</a></p>
+    </section>
+
+    <section id="burger">
+      <h2>Burger</h2>
+      <div class="center"><img src="https://loremflickr.com/600/400/burger?lock=202" alt="Burger" width="450"></div>
+      <p>A juicy burger served in a soft toasted bun with a crispy patty, fresh lettuce, tomato, onion and our special sauce. Price: Rs. 199.</p>
+      <p class="center"><a href="#top">&larr; Back to Menu</a></p>
+    </section>
+
+    <section id="fries">
+      <h2>French Fries</h2>
+      <div class="center"><img src="https://loremflickr.com/600/400/frenchfries?lock=203" alt="French Fries" width="450"></div>
+      <p>Crispy golden French fries, lightly salted and served hot with ketchup and a creamy dip. Price: Rs. 99.</p>
+      <p class="center"><a href="#top">&larr; Back to Menu</a></p>
+    </section>
+
+    <section id="menucard">
+      <h2>Menu Card</h2>
+      <div class="center"><img src="https://loremflickr.com/600/400/restaurant,menu?lock=204" alt="Menu Card" width="450"></div>
+      <p>Our menu card lists starters, main course, burgers, pizzas, sandwiches, desserts and drinks. Ask our staff for today's specials.</p>
+      <p class="center"><a href="#top">&larr; Back to Menu</a></p>
+    </section>
+
+    <section id="sandwich">
+      <h2>Sandwich</h2>
+      <div class="center"><img src="https://loremflickr.com/600/400/sandwich?lock=205" alt="Sandwich" width="450"></div>
+      <p>A grilled sandwich stuffed with fresh vegetables, melted cheese and tasty fillings. Price: Rs. 149.</p>
+      <p class="center"><a href="#top">&larr; Back to Menu</a></p>
+    </section>
+
+    <section id="cake">
+      <h2>Cake Slice</h2>
+      <div class="center"><img src="https://loremflickr.com/600/400/cake,slice?lock=206" alt="Cake Slice" width="450"></div>
+      <p>A soft and moist cake slice topped with rich cream and chocolate. Price: Rs. 129.</p>
+      <p class="center"><a href="#top">&larr; Back to Menu</a></p>
+    </section>
+
+    <section id="others">
+      <h2>Other Items</h2>
+      <div class="center"><img src="https://loremflickr.com/600/400/restaurant,food?lock=207" alt="Other Items" width="450"></div>
+      <p>Besides our special items, we also serve fresh salads, pasta, grilled dishes and drinks.</p>
+      <p class="center"><a href="#top">&larr; Back to Menu</a></p>
+    </section>
+
+  </div>
+</body>
+</html>

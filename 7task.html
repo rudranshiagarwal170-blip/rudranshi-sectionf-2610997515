@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Map Explorer</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #eef6fb; margin: 0; padding: 20px; color: #222; }
+    .box { max-width: 960px; margin: auto; background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,.15); }
+    h1 { text-align: center; color: #1f3560; }
+    p { text-align: center; }
+    .map { overflow-x: auto; text-align: center; }
+    ul { max-width: 520px; margin: 15px auto; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>World Map Explorer</h1>
+    <p>Click on a country in the map to open its information page in a new tab.</p>
+
+    <div class="map">
+      <img src="https://static.vecteezy.com/system/resources/previews/020/833/849/original/world-map-with-country-names-free-vector.jpg" alt="World map" width="900" height="450" usemap="#worldmap">
+    </div>
+
+    <map name="worldmap">
+      <!-- circle: Japan -->
+      <area shape="circle" coords="795,135,16" href="https://www.japan.travel/en/" alt="Japan - circular region" title="Japan" target="_blank">
+
+      <!-- rect: Australia -->
+      <area shape="rect" coords="732,252,835,322" href="https://www.australia.com" alt="Australia - rectangular region" title="Australia" target="_blank">
+
+      <!-- poly: India -->
+      <area shape="poly" coords="620,165,630,140,645,138,670,155,692,155,680,170,668,172,650,188,642,205,632,182,622,170" href="https://www.incredibleindia.org" alt="India - polygon region" title="India" target="_blank">
+
+      <!-- poly: USA -->
+      <area shape="poly" coords="138,105,212,102,242,110,282,112,248,162,208,160,158,145" href="https://www.usa.gov" alt="United States - polygon region" title="United States" target="_blank">
+
+      <!-- poly: Brazil -->
+      <area shape="poly" coords="300,212,325,220,362,240,350,280,318,308,308,300,305,265,275,250,275,225" href="https://www.visitbrasil.com" alt="Brazil - polygon region" title="Brazil" target="_blank">
+
+      <!-- default: rest of the map -->
+      <area shape="default" href="https://en.wikipedia.org/wiki/World_map" alt="Rest of the world map" title="World Map" target="_blank">
+    </map>
+
+    <ul>
+      <li>Circle &rarr; Japan</li>
+      <li>Rect &rarr; Australia</li>
+      <li>Poly &rarr; India, United States, Brazil</li>
+      <li>Default &rarr; Anywhere else on the map</li>
+    </ul>
+  </div>
+</body>
+</html>
